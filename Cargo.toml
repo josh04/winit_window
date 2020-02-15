@@ -1,5 +1,5 @@
 [package]
-name = "pistoncore-winit_window"
+name = "rg_winit_window"
 version = "0.12.0"
 authors = ["Layl <LaylConway@users.noreply.github.com>"]
 keywords = ["winit", "window", "piston"]
@@ -14,13 +14,14 @@ default = []
 use-vulkano = ["vulkano", "vulkano-win"]
 
 [lib]
-name = "winit_window"
+name = "rg_winit_window"
 path = "src/lib.rs"
 
 [dependencies]
-winit = "0.19"
+winit = { path = "../winit", features = ['web-sys'] }
 pistoncore-input = "0.28.0"
 pistoncore-window = "0.44.0"
+glow = "0.4.0"
 
 [dependencies.vulkano]
 version = "0.11"
